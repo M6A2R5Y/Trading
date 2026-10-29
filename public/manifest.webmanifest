@@ -1,0 +1,20 @@
+{
+  "name": "TickFrame Quantitative Companion",
+  "short_name": "TickFrame",
+  "description": "Real-time OHLCV market telemetry, statistical forecasting, and Binance order ticket companion.",
+  "start_url": "/?mode=companion",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#080b10",
+  "theme_color": "#0b0e14",
+  "categories": ["finance", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy | TickFrame Quantitative Terminal</title>
+    <meta
+      name="description"
+      content="Privacy Policy for TickFrame Quantitative Market Telemetry and Statistical Forecasting Terminal."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body class="legal-body">
+    <header class="terminal-topbar">
+      <div class="topbar-brand">
+        <a href="/" class="brand-link">
+          <span class="brand-square"></span>
+          <span class="brand-title">TICKFRAME</span>
+          <span class="brand-sub">QUANTITATIVE TELEMETRY &amp; ECONOMETRIC ENGINE</span>
+        </a>
+      </div>
+      <nav class="topbar-nav" aria-label="Legal Navigation">
+        <a href="/" class="nav-btn">Return to Terminal</a>
+        <a href="/privacy.html" class="nav-btn nav-btn-active">Privacy Policy</a>
+        <a href="/terms.html" class="nav-btn">Terms &amp; Conditions</a>
+      </nav>
+    </header>
+
+    <main class="legal-container">
+      <div class="legal-card">
+        <div class="legal-meta">DOCUMENT ID: TF-POL-PRIV-2026 // EFFECTIVE DATE: OCTOBER 29, 2026</div>
+        <h1>Privacy Policy</h1>
+        <p class="legal-lead">
+          TickFrame operates as a client-side quantitative market telemetry and statistical modeling workstation. We do not sell personal data, run behavioral advertising trackers, or custody user funds.
+        </p>
+
+        <section class="legal-section">
+          <h2>1. Architecture and Data Processing Scope</h2>
+          <p>
+            All econometric calculations, including Ordinary Least Squares (OLS) drift estimation, Holt-Winters double exponential smoothing, Autoregressive AR(1) Ornstein-Uhlenbeck modeling, and walk-forward backtests, execute locally inside your browser process.
+          </p>
+          <ul>
+            <li>
+              <strong>Custom CSV Datasets:</strong> When you import an OHLCV CSV file for statistical evaluation, the file contents are parsed strictly in local browser memory (`FileReader` API) and are never transmitted to any external server.
+            </li>
+            <li>
+              <strong>Workspace Preferences:</strong> Instrument watchlist selections, active bar intervals, and forecast horizon settings are stored locally in your browser using `window.localStorage` under the `tickframe_prefs_v1` key. You can clear this state at any time using your browser settings.
+            </li>
+          </ul>
+        </section>
+
+        <section class="legal-section">
+          <h2>2. Market Data Feed Connections</h2>
+          <p>
+            To display real-time spot market candles and 24-hour orderbook ticker summaries, your browser establishes direct HTTPS and WebSocket connections to public market data endpoints (`data-api.binance.vision` and `data-stream.binance.vision`). Those requests transmit standard network metadata (such as your IP address and User-Agent header) directly to the market data provider in accordance with their public API terms.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>3. Cookies and Third-Party Telemetry</h2>
+          <p>
+            TickFrame does not set tracking cookies, cross-site marketing pixels, session recording scripts, or behavioral fingerprinting identifiers. Web fonts (`IBM Plex Sans` and `IBM Plex Mono`) are loaded from Google Fonts over HTTPS.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>4. Data Retention and User Rights</h2>
+          <p>
+            Because TickFrame does not maintain a centralized database of user profiles or uploaded financial series, there is no server-side personal record to export or erase. Clearing site data in your browser removes all locally persisted preferences immediately.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>5. Contact and Compliance Inquiries</h2>
+          <p>
+            Questions regarding this Privacy Policy or data handling practices may be directed to the systems engineering maintainer via the repository issue tracker or compliance desk at <code>compliance@tickframe.local</code>.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="terminal-footer">
+      <div class="footer-left">
+        <span>TICKFRAME QUANTITATIVE WORKSTATION</span>
+        <span class="footer-sep">/</span>
+        <span>LOCAL CLIENT-SIDE EXECUTION</span>
+      </div>
+      <div class="footer-right">
+        <a href="/">Terminal</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms &amp; Conditions</a>
+      </div>
+    </footer>
+  </body>
+</html>
